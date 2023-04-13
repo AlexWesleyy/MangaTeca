@@ -1,0 +1,35 @@
+<h1>Editando {{user.nome}} </h1>
+
+<div >
+
+  <form action="/users/edit" method="post" class="form-editar">
+
+    <div>
+      <input type="hidden" name="id" value="{{user.id}}">
+      <div>
+        <label class="label-editar" for="nome">Nome:</label>
+        <input type="text" class="input-editar" name="nome" value="{{user.nome}}"/>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="label-editar" for="tipo">Tipo:</label>
+        <input type="text" class="input-editar" name="tipo" value="{{user.tipo}}"/>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="label-editar" for="volumes">Volumes:</label>
+        <input type="text" class="input-editar" name="volumes" value="{{user.volumes}}"/>
+      </div>
+    </div>
+
+    <div>
+      <input type="submit" value="Atualizar" class="btn-editar">
+    </div>
+
+  </form>
+
+</div>

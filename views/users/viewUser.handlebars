@@ -1,0 +1,46 @@
+<div class="title">
+  <h1>Todos os Mangás</h1>
+  <div> 
+    <a href="/users" class="btn">Home</a>
+    <a href="/users/add" class="btn">Adicionar Mangás</a>
+  </div>
+</div>
+
+
+<ul class="usuarios">
+  {{#each users}}
+  <li>
+  <div>
+    <div class="ajuste">
+      <div>
+        <label for="">Nome: {{this.nome}}</label>
+      </div>
+      <div>
+        <label for="">Tipo: {{this.tipo}}</label>
+      </div>
+      <div>
+        <label for="">Volumes: {{this.volumes}}</label>
+      </div>
+      <div>
+        <a href="/users/edit/{{this.id}}">
+          Editar
+        </a>
+      </div>
+      <div>
+        <form action="/users/remove" method="post">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit" value="Remover" class="btn-inicial">
+            <i>Excluir</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </li>
+
+  {{/each}}
+</ul>
+
+
+
+</div>
